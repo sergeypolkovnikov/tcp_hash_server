@@ -2,7 +2,7 @@
 
 ## build
 ~~~
-g++ -std=c++20 -pthread -o tcp_hash_server ./tcp_hash_server.cpp -lssl -lcrypto
+mkdir build && cd build && cmake .. && make
 ~~~
 
 ## start server
@@ -10,14 +10,13 @@ g++ -std=c++20 -pthread -o tcp_hash_server ./tcp_hash_server.cpp -lssl -lcrypto
 ./tcp_hash_server
 ~~~
 
-## test
+## run test
 ~~~
 python3 test.py
 ~~~
 
-## unit test
+## run unit tests
 ~~~
-g++ -std=c++20 -I/usr/include -pthread test.cpp -o hasher_test -lgtest -lgtest_main -lcrypto./
 ./hasher_test
 ~~~
 
